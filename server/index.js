@@ -21,7 +21,7 @@ export const razorpay = new Razorpay({
 
 // Middleware for CORS
 app.use(cors({
-  origin: 'https://multivendor-e-com-rawattech.onrender.com',  // Allow requests from localhost:3000
+  origin: '' || "http://localhost:3000",  // Allow requests from localhost:3000
   credentials: true,  // Allow credentials (cookies, authorization headers, etc.)
 }));
 
@@ -43,14 +43,7 @@ app.use('/api/v1', routes);
 const port = process.env.PORT || 4000;
 const server = http.createServer(app);
 
-// Serve static files from the React app in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
-  });
-}
 
 server.listen(port, () => {
   console.log(`server is running on port ${port}`);
