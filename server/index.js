@@ -21,7 +21,7 @@ export const razorpay = new Razorpay({
 
 // Middleware for CORS
 app.use(cors({
-  origin: '' || "http://localhost:3000",  // Allow requests from localhost:3000
+  origin: "https://multivendor-application-frontend.onrender.com",  // Allow requests from localhost:3000
   credentials: true,  // Allow credentials (cookies, authorization headers, etc.)
 }));
 
