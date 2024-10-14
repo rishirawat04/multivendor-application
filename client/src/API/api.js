@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create a global Axios instance
 const api = axios.create({
-  baseURL: 'https://mulitvendorrawattec.onrender.com',  
+  baseURL: 'https://multivendor-application.onrender.com/api/v1',  
 });
 
 export default api;
