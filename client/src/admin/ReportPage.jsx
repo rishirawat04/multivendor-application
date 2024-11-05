@@ -450,9 +450,9 @@ const ReportPage = () => {
                   <TableCell>{row.deliveryAddress.city}</TableCell>
                   <TableCell>
                     {/* Loop through the products array and extract vendorShop */}
-                    {row.products.map((item, index) => (
+                    {row?.products.map((item, index) => (
                       <span key={index}>
-                        {item.product.vendorShop}
+                        {item?.product?.vendorShop}
                      
                       </span>
                     ))}
